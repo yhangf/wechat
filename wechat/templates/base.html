@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    {% block head %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}WeChat{% endblock %}</title>
+        <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css">
+    </head>
+    {% endblock %}
+    <!-- <body background="{{ url_for('static', filename='images/bg.png') }}" style="web_bg bg"> -->
+    <body>
+        <main class="container">
+            <header>
+                <h1 class="text-center display-4">
+                    <img src="{{ url_for('static', filename='images/favicon.png') }}" height="80" width="80"/>
+                    <a href="{{ url_for('index') }}" class="text-success"><strong>WeChat</strong></a>
+                    <small class="text-muted sub-title">从知己，看见自己！</small>
+                </h1>
+            </header>
+            {% block navbar %}{% endblock %}
+            {% block content %}{% endblock %}
+            <footer class="text-center">
+                {% block footer %}
+                    <small> &copy; 2018 <a href="https://github.com/yhangf" title="Written by Hangfeng Yang">Hangfeng Yang</a></small>
+                    <p><a id="bottom" href="#" title="Go Top">&uarr;</a></p>
+                {% endblock %}
+            </footer>
+        </main>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.slim.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+        {{ moment.include_moment(local_js=url_for('static', filename='js/moment-with-locales.min.js')) }}
+    </body>
+</html>

@@ -1,0 +1,17 @@
+[[source]]
+url = "https://mirrors.ustc.edu.cn/pypi/web/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+watchdog = "*"
+
+[packages]
+bootstrap-flask = "*"
+flask-moment = "*"
+flask-sqlalchemy = "*"
+python-dotenv = "*"
+flask-wtf = "*"
+flask = "*"
+itchat = "*"
+gevent = "*"

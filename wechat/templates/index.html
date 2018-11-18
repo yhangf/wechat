@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" type="text/css">
+{% block navbar %}
+    <div class="row">
+        <div class="col-md-2", style="text-align:right">
+    		   <a id="avocado" href= "{{ url_for("init") }}"
+               		class="flex-vertical-hor-center">
+                <img src="{{ url_for('static', filename='images/牛油果.png') }}" height="100" width="100"/>
+                <span>初始化</span>
+            </a>
+        </div>
+        <div class="col-md-2", style="text-align:right">
+    		   <a id="grape" href="{{ url_for("replay") }}"
+               class="flex-vertical-hor-center">
+                <img src="{{ url_for('static', filename='images/葡萄.png') }}" height="100" width="100"/>
+                <span>自动回复</span>
+            </a>
+        </div>
+        <div class="col-md-2", style="text-align:right">
+    		   <a id="watermelon" href="{{ url_for("get_chatrooms") }}"
+               class="flex-vertical-hor-center">
+                <img src="{{ url_for('static', filename='images/西瓜.png') }}" height="100" width="100"/>
+                <span>监听群组</span>
+            </a>
+        </div>
+        <div class="col-md-2", style="text-align:right">
+    		   <a id="kiwi-fruit" href="{{ url_for("spy") }}"
+               class="flex-vertical-hor-center">
+                <img src="{{ url_for('static', filename='images/猕猴桃.png') }}" height="100" width="100"/>
+                <span>消息提取</span>
+            </a>
+        </div>
+    	<div class="col-md-2", style="text-align:right">
+    		   <a id="lemon" href="{{ url_for("send") }}"
+               class="flex-vertical-hor-center">
+                <img src="{{ url_for('static', filename='images/柠檬.png') }}" height="100" width="100"/>
+                <span>发送消息</span>
+            </a>
+        </div>
+    	<div class="col-md-2", style="text-align:right">
+    		   <a id="mangosteen" href="{{ url_for("get_friends") }}"
+               class="flex-vertical-hor-center">
+                <img src="{{ url_for('static', filename='images/山竹.png') }}" height="100" width="100"/>
+                <span>好友列表</span>
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <small> &copy; 2018 <a href="https://github.com/yhangf" title="Written by Hangfeng Yang">Hangfeng Yang</a></small>
+{% endblock %}

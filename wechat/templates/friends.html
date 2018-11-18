@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from 'bootstrap/pagination.html' import render_pagination %}
+
+{% block content %}
+    <h5><strong>好友列表</strong></h5>
+        <small class="float-right">
+            <a href="#bottom" title="Go Bottom">&darr;</a>
+        </small>
+    </h5>
+    <div class="table-responsive", style="text-align:center">
+        <table class="table text-nowrap">
+            <col align="center" />
+            <col align="center" />
+            <col align="center" />
+        <thead>
+            <tr>
+                <th>昵称</th>
+                <th>备注</th>
+                <th>个性签名</th>
+            </tr>
+        </thead>
+            {% for friend in friends %}
+                <tbody>
+                    <tr>
+                        <td>{{ friend.NickName }}</td>
+                        <td>{{ friend.RemarkName }}</td>
+                        <td>{{ friend.Signature }}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>
+    {% if friends %}
+        <div class="page-footer">{{ render_pagination(pagination) }}</div>
+    {% endif %}
+{% endblock %}

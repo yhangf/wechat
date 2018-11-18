@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- <a href="{{ url_for('index') }}">&larr;return</a> -->
+    <h5><strong><center>当前监听的群聊:{{ chatrooms[:-1]|length }}个</center></strong></h5>
+        <small class="float-right">
+            <a href="#bottom" title="Go Bottom">&darr;</a>
+        </small>
+    </h5>
+    <div class="table-responsive", style="text-align:center">
+        <table class="table text-nowrap">
+            <col align="center" />
+            <col align="center" />
+        <thead>
+            <tr>
+                <th>群名称</th>
+                <th>群成员数量</th>
+            </tr>
+        </thead>
+            {% for chat in chatrooms[:-1] %}
+                <tbody>
+                    <tr>
+                        <td>{{ chat.NickName }}</td>
+                        <td>{{ update(search_chatrooms(chat.NickName)[0]["UserName"])["MemberList"]|length }}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
