@@ -1,6 +1,6 @@
-# <center>WeChat-基于Flask开发的网页版微信</center>
+# <p align="center">WeChat-基于Flask开发的网页版微信</p>
 
-![](.\image\homepage.png)
+![](https://github.com/yhangf/wechat/blob/master/image/homepage.png)
 
 <p align="center">
     <a href="https://github.com/yhangf/wechat/blob/master/LICENSE">
@@ -19,6 +19,7 @@
     <img src="https://img.shields.io/github/forks/yhangf/wechat.svg?style=social&label=Fork">
         </a>
 </p>
+
 - 安装
 
   ```shell
@@ -42,17 +43,17 @@
 
   1. 监听群组
 
-     ![](.\image\chatrooms.png)
+     ![](https://github.com/yhangf/wechat/blob/master/image/chatrooms.png)
 
   2. 消息提取
 
-     ![](.\image\spy.png)
+     ![](https://github.com/yhangf/wechat/blob/master/image/spy.png)
 
   3. 发送消息
 
-     ![](.\image\send.png)
+     ![](https://github.com/yhangf/wechat/blob/master/image/send.png)
 
   4. 好友列表
 
-     ![](.\image\friends.png)
+     ![](https://github.com/yhangf/wechat/blob/master/image/friends.png)
 
